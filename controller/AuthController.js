@@ -70,11 +70,11 @@ const signup = async (req, res, next) => {
 
 const sendVerificationEmail = (to, link) => {
   const transporter = nodemailer.createTransport({
-    service: "godaddy",
-    host: 'smtp.debtscleared.com',
-    port: 587, // Replace with your SMTP server port (587 is common for TLS)
-    secure: false,
-    connectionTimeout: 100000,
+    service: "gmail",
+    // host: 'smtp.debtscleared.com',
+    // port: 587, // Replace with your SMTP server port (587 is common for TLS)
+    // secure: false,
+    // connectionTimeout: 100000,
     auth: {
       user: process.env.EMAIL, // your email address
       pass: process.env.PASS, // your email password
@@ -163,10 +163,10 @@ const generateVerificationCode = () => {
 
 const sendVerificationCode = (to, code) => {
   const transporter = nodemailer.createTransport({
-    service: "godaddy",
-    host: 'smtp.debtscleared.com',
-    port: 587, // Replace with your SMTP server port (587 is common for TLS)
-    secure: false,
+    service: "gmail",
+    // host: 'smtp.debtscleared.com',
+    // port: 587, // Replace with your SMTP server port (587 is common for TLS)
+    // secure: false,
     connectionTimeout: 100000,
     auth: {
       user: process.env.EMAIL, // your email address
