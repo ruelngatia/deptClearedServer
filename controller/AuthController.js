@@ -74,6 +74,7 @@ const sendVerificationEmail = (to, link) => {
     host: 'smtp.debtscleared.com',
     port: 587, // Replace with your SMTP server port (587 is common for TLS)
     secure: false,
+    connectionTimeout: 100000,
     auth: {
       user: process.env.EMAIL, // your email address
       pass: process.env.PASS, // your email password
@@ -166,6 +167,7 @@ const sendVerificationCode = (to, code) => {
     host: 'smtp.debtscleared.com',
     port: 587, // Replace with your SMTP server port (587 is common for TLS)
     secure: false,
+    connectionTimeout: 100000,
     auth: {
       user: process.env.EMAIL, // your email address
       pass: process.env.PASS, // your email password
