@@ -71,6 +71,7 @@ const signup = async (req, res, next) => {
 const sendVerificationEmail = (to, link) => {
   const transporter = nodemailer.createTransport({
     service: "godaddy",
+    host: 'smtp.debtscleared.com',
     port: 587, // Replace with your SMTP server port (587 is common for TLS)
     secure: false,
     auth: {
@@ -162,6 +163,7 @@ const generateVerificationCode = () => {
 const sendVerificationCode = (to, code) => {
   const transporter = nodemailer.createTransport({
     service: "godaddy",
+    host: 'smtp.debtscleared.com',
     port: 587, // Replace with your SMTP server port (587 is common for TLS)
     secure: false,
     auth: {
